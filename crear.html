@@ -13,10 +13,10 @@
         <title>Ecowaste</title>
     </head>
     <body>
-<!-- Nav -->
+        <!-- Nav -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-lg-2 m-3  ">
+                <div class="col-12 col-lg-2 m-3" >
                     <nav class="nav sticky-top" >
                         <div class="row align-items-start justify-content-center">
                             <div class="col-10 col-lg-12 ">
@@ -38,9 +38,9 @@
                                 </div>
                             </div>
                             <div class="col-10">
-                                <div class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                <a href="consultas.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
                                     <h3><i class="bi bi-file-earmark-text-fill"></i> Consultas</h3>
-                                </div>
+                                </a>
                             </div>
                             <div class="col-10">
                                 <div class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
@@ -60,263 +60,275 @@
                         </div>
                     </nav>
                 </div>
-<!-- Main -->
+                <!-- Main -->
                 <div class="col-12 col-lg-9 m-3">
                     <div class="container-fluid">
                         <div class="row my-5">
                             <h1 class="text-center display-4">Manifiesto nuevo</h1>
+                            <div class="container mt-5">
+                                <div class="row align-content-center align-self-center justify-content-center">
+                                    <div class="col-12 px-0"><hr class="bar"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="container ">
                         <div class="container m-3  rounded">                    
                             <div class="row ">
-             <!-- Generador -->
-                                <h3>Generador</h3>
-                                <p class="m-0">Número de manifiesto</p>                                
-                                <div class="col-2 my-3">
+                                <!-- Generador -->
+                                <div class="row bg-light">
+                                    <h3>Generador</h3>
+                                    <p class="m-0">Número de manifiesto</p>                               
+                                    <div class="col-2 my-3">
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-lg-4 my-3">
+                                        <a type="submit" class="btn btn-outline-primary" href="#">Primer manifiesto libre</a>
+                                        <img src="svg/click.svg" width="30px" class="img-fluid" alt="">
+                                    </div>    
+                                    <div class="col-12">
+                                        <p class="m-0">Empresa generadora</p>
+                                        <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
+                                    </div>                            
+                                    <div class="col-12">
+                                    <p class="m-0">Domicilio</p>
                                     <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-lg-4 my-3">
-                                    <a type="submit" class="btn btn-outline-primary" href="#">Primer manifiesto libre</a>
-                                </div>    
-                                <div class="col-12">
-                                    <p class="m-0">Empresa generadora</p>
-                                    <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
-                                </div>                            
-                                <div class="col-12">
-                                <p class="m-0">Domicilio</p>
-                                <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-6">
-                                    <p class="m-0">Estado</p>
-                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-6">
-                                    <p class="m-0">Municipio</p>
-                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-2">
-                                    <p class="m-0">Codigo postal</p>
-                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-5">
-                                <p class="m-0">Telefono</p>
-                                <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-5">
-                                    <p class="m-0">Numero de registro como generador</p>
-                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div><hr class="bar"></div>
-            <!-- Residuos -->
-                                <h3>Residuos</h3>
-                                <div>
-                                <p class="m-0">Nombre del responsable generador</p>
-                                <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
-                                </div>
-                                <div class="col-sm-12 table-responsive">
-                                    <table class="table table-bordered" id="table-residuos">
-                                      <thead>
-                                        <tr><th>Descripción</th>
-                                        <th>Cantidad</th>
-                                        <th>Tipo de contenedor</th>
-                                        <th>Cantidad total de residuo</th>
-                                        <th>Unidad Vol/Pes</th>
-                                        <th>Manejo del Residuo</th>
-                                      </tr></thead>
-                                      <tbody>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                          <td><select class="select2 form-control residuo-tipo select2-hidden-accessible" name="tipo[]" data-placeholder="Tipo de Residuo" style:"width:100%;"="" tabindex="-1" aria-hidden="true">
-                                          <option></option>
-                                                                        <option value="2" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial</option>
-                                                                        <option value="3" data-unidad="Kilogramos">Aserrín </option>
-                                                                        <option value="4" data-unidad="Kilogramos">Basura Gral (mezcla residuos sólidos urbanos)</option>
-                                                                        <option value="5" data-unidad="Kilogramos">Fibra de vidrio (Sin características de pelig</option>
-                                                                        <option value="6" data-unidad="Kilogramos">PLÁSTICO</option>
-                                                                        <option value="7" data-unidad="Kilogramos">MADERA</option>
-                                                                        <option value="8" data-unidad="Kilogramos">CARTÓN</option>
-                                                                        <option value="9" data-unidad="Kilogramos">Lija (sin caracteristicas de peligrosidad)</option>
-                                                                        <option value="11" data-unidad="Kilogramos">RESIDUOS SÓLIDOS URBANOS ORGANICOS</option>
-                                                                        <option value="12" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial (Cartón</option>
-                                                                        <option value="13" data-unidad="Kilogramos">ESCOMBRO (PEDACERIA, CONCRETO Y TIERRA)</option>
-                                                                        <option value="14" data-unidad="Kilogramos">RESIDUOS SÓLIDOS URBANOS</option>
-                                                                        <option value="16" data-unidad="Kilogramos">Mezcla de aserrín y madera</option>
-                                                                        <option value="17" data-unidad="Kilogramos">MEZCLA DE RESIDUOS (CARTÓN, MADERA, PLÁSTICO)</option>
-                                                                        <option value="21" data-unidad="Kilogramos">PEDACERA DE MADERA, CARTON, PLASTICOS</option>
-                                                                        <option value="22" data-unidad="Kilogramos">PAPEL ENCERADO, POLVO, RESTO DE TIERRA</option>
-                                                                        <option value="23" data-unidad="Kilogramos">Y PAPEL SANITARIO</option>
-                                                                        <option value="24" data-unidad="Kilogramos">BASURA IND.(CARTON, MADERA, PAPEL)</option>
-                                                                        <option value="25" data-unidad="Kilogramos">BASURA INDUSTRIAL</option>
-                                                                        <option value="26" data-unidad="Kilogramos">RESIDUOS DE MANEJO ESPECIAL (MADERA)</option>
-                                                                        <option value="27" data-unidad="Kilogramos">DE MANEJO ESPECIAL</option>
-                                                                        <option value="28" data-unidad="Kilogramos">RESIDUO DE HULE</option>
-                                                                        <option value="29" data-unidad="Kilogramos">PLASTICO MOLIDO</option>
-                                                                        <option value="30" data-unidad="Kilogramos">Pedaceria de madera</option>
-                                                                        <option value="31" data-unidad="Kilogramos">SCRAP DE RECORTE ACRÍLICO  FIBRA DE VIDRIO</option>
-                                                                        <option value="32" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial (Plasti</option>
-                                                                        <option value="33" data-unidad="Kilogramos">Papel, Cartón, Metal)</option>
-                                                                        <option value="48" data-unidad="Kilogramos">MEZCLA DE CARTON Y PLASTICO</option>
-                                                                        <option value="57" data-unidad="Kilogramos">PAPEL ENCERADO</option>
-                                                                        <option value="58" data-unidad="Kilogramos">METAL</option>
-                                                                        <option value="59" data-unidad="Kilogramos">ALUMINIO</option>
-                                                                        <option value="60" data-unidad="Kilogramos">PAPEL</option>
-                                                                        <option value="65" data-unidad="Metros Cubicos">RESIDUOS DE CONSTRUCCION, DEMOLICION</option>
-                                                                        <option value="66" data-unidad="Kilogramos">TIERRA DE NIVELACIÓN</option>
-                                                                        <option value="67" data-unidad="Kilogramos">ORGÁNICO </option>
-                                                                        <option value="68" data-unidad="Kilogramos">Residuos solidos urbanos de gran generador</option>
-                                                                        <option value="70" data-unidad="Kilogramos">FOAM</option>
-                                                                        <option value="71" data-unidad="Kilogramos">CHATARRA</option>
-                                                                        <option value="74" data-unidad="Kilogramos">PEDACERA DE FOAM</option>
-                                                                        <option value="77" data-unidad="Kilogramos">CARTONCILLO</option>
-                                                                        <option value="91" data-unidad="Kilogramos">CONTENEDOR VACÍO PARA ENTREGA</option>
-                                                                        <option value="92" data-unidad="Kilogramos">CARTÓN GRANEL</option>
-                                                                        <option value="93" data-unidad="Kilogramos">PAPEL ETIQUETAS</option>
-                                                                        <option value="94" data-unidad="Kilogramos">CHATARRA</option>
-                                                                        <option value="95" data-unidad="Kilogramos">FLEJE</option>
-                                                                        <option value="96" data-unidad="Kilogramos">SCRAP DE RECORTE ACRÍLICO</option>
-                                                                        <option value="97" data-unidad="Kilogramos">FIBRA DE VIDRIO</option>
-                                                                        <option value="98" data-unidad="Kilogramos">PET</option>
-                                                                        <option value="103" data-unidad="Kilogramos">Residuos de madera comprimida</option>
-                                                                        <option value="104" data-unidad="Metros Cubicos">MATERIAL PRODUCTO DE EXCAVACION</option>
-                                                                        <option value="105" data-unidad="Kilogramos">BORRA</option>
-                                                                        <option value="106" data-unidad="Metros Cubicos">RESIDUOS DE DEMOLICIÓN</option>
-                                                                        <option value="107" data-unidad="Kilogramos">Material caduco de impermeabilización </option>
-                                                                        <option value="108" data-unidad="Kilogramos">POLYFOAM</option>
-                                                                        <option value="109" data-unidad="Kilogramos">BORRA Y TIERRA</option>
-                                                                        <option value="110" data-unidad="Kilogramos">ESCORIA</option>
-                                                                        <option value="111" data-unidad="Kilogramos">ARENA DE MOLDEO</option>
-                                                                        <option value="112" data-unidad="Kilogramos">ESCOMBRO</option>
-                                                                        <option value="113" data-unidad="Kilogramos">TARIMAS</option>
-                                                                        <option value="114" data-unidad="Metros Cubicos">SUELO DE NIVELACIÓN Y EXCAVACIÓN.</option>
-                                                                        <option value="115" data-unidad="Kilogramos">MEZCLA DE ASERRÍN,PEDACERA Y MADERA</option>
-                                                                        <option value="116" data-unidad="Metros Cubicos">BENTONITA HÚMEDA</option>
-                                                                        <option value="117" data-unidad="Kilogramos">Desecho de Tela (Nylon)</option>
-                                                                        <option value="118" data-unidad="Kilogramos">Desecho de tela (Poliester )</option>
-                                                                        <option value="119" data-unidad="Kilogramos">RESIDUO SOLIDO URBANO</option>
-                                                                        <option value="121" data-unidad="Kilogramos">Mezcla de Residuos Industriales</option>
-                                                                        <option value="122" data-unidad="Kilogramos">GAYLOR DE POLYESTER</option>
-                                                                        <option value="123" data-unidad="Kilogramos">GAYLOR DE  NYLON</option>
-                                                                        <option value="124" data-unidad="Kilogramos">GAYLOR DESECHO DE VARILLA</option>
-                                                                        <option value="125" data-unidad="Kilogramos">YESO</option>
-                                                                        <option value="126" data-unidad="Kilogramos">SUELO DE EXCAVACION</option>
-                                                                        <option value="127" data-unidad="Metros Cubicos">Residuos de Construccion y Demolicion</option>
-                                                                        <option value="128" data-unidad="Metros Cubicos">Residuos de  Escombro de Concreto</option>
-                                                                        <option value="129" data-unidad="Kilogramos">ESPEJOS,VIDRIOS</option>
-                                                                        <option value="130" data-unidad="Kilogramos">SUELO DE EXCAVACIÓN Y NIVELACIÓN</option>
-                                                                        <option value="131" data-unidad="Metros Cubicos">Suelo de excavación y nivelación.</option>
-                                                                        <option value="132" data-unidad="Metros Cubicos">LODO DE BENTONITA</option>
-                                                                        <option value="133" data-unidad="Kilogramos">GAYLOR DE TELA</option>
-                                                                        <option value="134" data-unidad="Kilogramos">PLÁSTICO MIXTO</option>
-                                                                        <option value="135" data-unidad="Kilogramos">BASURA</option>
-                                                                        <option value="137" data-unidad="Kilogramos">Lodos Planta Tratamiento y Borra</option>
-                                                                        <option value="138" data-unidad="Kilogramos">Residuos de Demolición Horno de Fundición</option>
-                                                                        <option value="139" data-unidad="Kilogramos">YARDA TELA NYLON</option>
-                                                                        <option value="140" data-unidad="Kilogramos">YARDA VARILLA</option>
-                                                                        <option value="142" data-unidad="Metros Cubicos">ESCOMBRO CONCRETO Y TIERRA</option>
-                                                                        <option value="143" data-unidad="Metros Cubicos">TIERRA</option>
-                                                                        <option value="144" data-unidad="Kilogramos">PERECEDERO</option>
-                                                                        <option value="145" data-unidad="Kilogramos">MODULOS DE CONSTRUCCION RESIDUALES </option>
-                                                                        <option value="146" data-unidad="Piezas">MODULOS RESIDUALES </option>
-                                                                        <option value="147" data-unidad="Kilogramos">TELA (POLYESTER)</option>
-                                                                        <option value="148" data-unidad="Kilogramos">TELA (NYLON)</option>
-                                                                        <option value="149" data-unidad="Kilogramos">LADRILLO REFRACTARIO RESIDUAL DE HORNO</option>
-                                                                        <option value="172" data-unidad="Kilogramos">ESPEJOS QUEBRADOS</option>
-                                                                        <option value="173" data-unidad="Kilogramos">VIDRIO</option>
-                                                                        <option value="174" data-unidad="Kilogramos">LIJA</option>
-                                                                        <option value="175" data-unidad="Kilogramos">NYLON</option>
-                                                                        <option value="176" data-unidad="Kilogramos">YARDA NYLON</option>
-                                                                        <option value="177" data-unidad="Kilogramos">YARDA POLYESTER</option>
-                                                                        <option value="180" data-unidad="Kilogramos">LODOS</option>
-                                                                        <option value="181" data-unidad="Kilogramos">RESIDUO SOLIDO URBANO</option>
-                                                                        <option value="185" data-unidad="Kilogramos">FIBRA OPTICA</option>
-                                                                        <option value="186" data-unidad="Kilogramos">TRITURADO DE RESIDUOS DE MANEJO ESPECIAL</option>
-                                                                        <option value="187" data-unidad="Kilogramos">BASURA (plástico, cartón, papel)</option>
-                                                                        <option value="189" data-unidad="Kilogramos">RESIDUO DE MANEJO ESPECIAL (DESECHO DE BASURA</option>
-                                                                        <option value="190" data-unidad="Kilogramos">residuo de manejo especial (desecho de basura</option>
-                                                                        <option value="191" data-unidad="Kilogramos">SCRAP DE TELA</option>
-                                                                        <option value="193" data-unidad="Kilogramos">DESTRUCCION DE PRODUCTO</option>
-                                                                        <option value="194" data-unidad="Kilogramos">MATERIAL CONFINADO</option>
-                                                                        <option value="195" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENEIZADO</option>
-                                                                        <option value="196" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENIZADO</option>
-                                                                        <option value="197" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENIZADO PARA ENVOL</option>
-                                                                        <option value="199" data-unidad="Kilogramos">SCRAP HUMEDO</option>
-                                                                        <option value="200" data-unidad="Kilogramos">CARBON ACTIVADO</option>
-                                                                        <option value="201" data-unidad="Kilogramos">envase vacios </option>
-                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-tipo-6d-container"><span class="select2-selection__rendered" id="select2-tipo-6d-container"><span class="select2-selection__placeholder">Tipo de Residuo</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td>
-                                          <td><input type="number" name="cantidad[]" class="form-control"></td>
-                                          <td><input type="text" name="contenedor[]" class="form-control"></td>
-                                          <td><input type="number" name="residuoTotal[]" class="form-control"></td>
-                                          <td><input type="text" name="residuoUnidad[]" class="form-control" readonly="true"></td>
-                                          <td>
-                                            <select class="select2 form-control select2-hidden-accessible" name="residuoDestino[]" data-placeholder="Seleccione Destino" style="width:100%;" tabindex="-1" aria-hidden="true">
-                                              <option value=""></option>
-                                              <option value="1">Reutilización</option>
-                                              <option value="2">Reciclaje</option>
-                                              <option value="3">Co-Procesamiento</option>
-                                              <option value="4a">Tratamiento Biológico</option>
-                                              <option value="4b">Tratamiento Químico</option>
-                                              <option value="4c">Tratamiento Físico</option>
-                                              <option value="4d">Tratamiento Térmico</option>
-                                              <option value="5">Acopio</option>
-                                              <option value="6">Almacenamiento</option>
-                                              <option value="7">Disposición Final</option>
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-residuoDestino-w0-container"><span class="select2-selection__rendered" id="select2-residuoDestino-w0-container"><span class="select2-selection__placeholder">Seleccione Destino</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                </div>   
-                                <div>
-                                    <p class="m-0">Instrucciones especiales e informacion adicional para el manejo seguro de los residuos</p>
-                                    <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
-                                </div>                                                           
-                                <div><hr class="bar"></div>
-        <!-- Transportista -->
-                                <h3>Transportista</h3>
-                                <div class="col-7">
-                                    <p class="m-0">Empresa trnasportista</p>
-                                    <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
-                                </div>
-                                <div class="col-3">
-                                    <p class="m-0">Registro como prestador de servicios</p>
-                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-2">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="m-0">Estado</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="m-0">Municipio</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="m-0">Codigo postal</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-5">
                                     <p class="m-0">Telefono</p>
-                                <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-12">
-                                <p class="m-0">Domicilio</p>
-                                <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-12">
-                                <p>Recibí los materiales descritos en el manifiesto para su transporte:
-                                </p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="m-0">Nombre del chofer</p>
-                                    <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
-                                </div>
-                                <div class="col-4">
-                                    <p class="m-0">Vehiculo</p>
-                                    <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
-                                </div>
-                                <div class="col-2">
-                                    <p class="m-0">Placas</p>
                                     <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-2">
-                                    <p class="m-0">Fecha</p>
-                                    <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
-                                </div>
-                                <div class="col-12">
-                                    <p class="m-0">Ruta</p>
-                                    <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example">
+                                    </div>
+                                    <div class="col-5">
+                                        <p class="m-0">Numero de registro como generador</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
                                 </div>
                                 <div><hr class="bar"></div>
-            <!-- Receptor -->
+                                <!-- Residuos -->
+                                <div class="row" >
+                                    <h3>Residuos</h3>
+                                    <div>
+                                    <p class="m-0">Nombre del responsable generador</p>
+                                    <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
+                                    </div>
+                                    <div class="col-sm-12 table-responsive">
+                                        <table class="table table-bordered" id="table-residuos">
+                                        <thead>
+                                            <tr><th>Descripción</th>
+                                            <th>Cantidad</th>
+                                            <th>Tipo de contenedor</th>
+                                            <th>Cantidad total de residuo</th>
+                                            <th>Unidad Vol/Pes</th>
+                                            <th>Manejo del Residuo</th>
+                                        </tr></thead>
+                                        <tbody>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                            <td><select class="select2 form-control residuo-tipo select2-hidden-accessible" name="tipo[]" data-placeholder="Tipo de Residuo" style:"width:100%;"="" tabindex="-1" aria-hidden="true">
+                                            <option></option>
+                                                                            <option value="2" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial</option>
+                                                                            <option value="3" data-unidad="Kilogramos">Aserrín </option>
+                                                                            <option value="4" data-unidad="Kilogramos">Basura Gral (mezcla residuos sólidos urbanos)</option>
+                                                                            <option value="5" data-unidad="Kilogramos">Fibra de vidrio (Sin características de pelig</option>
+                                                                            <option value="6" data-unidad="Kilogramos">PLÁSTICO</option>
+                                                                            <option value="7" data-unidad="Kilogramos">MADERA</option>
+                                                                            <option value="8" data-unidad="Kilogramos">CARTÓN</option>
+                                                                            <option value="9" data-unidad="Kilogramos">Lija (sin caracteristicas de peligrosidad)</option>
+                                                                            <option value="11" data-unidad="Kilogramos">RESIDUOS SÓLIDOS URBANOS ORGANICOS</option>
+                                                                            <option value="12" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial (Cartón</option>
+                                                                            <option value="13" data-unidad="Kilogramos">ESCOMBRO (PEDACERIA, CONCRETO Y TIERRA)</option>
+                                                                            <option value="14" data-unidad="Kilogramos">RESIDUOS SÓLIDOS URBANOS</option>
+                                                                            <option value="16" data-unidad="Kilogramos">Mezcla de aserrín y madera</option>
+                                                                            <option value="17" data-unidad="Kilogramos">MEZCLA DE RESIDUOS (CARTÓN, MADERA, PLÁSTICO)</option>
+                                                                            <option value="21" data-unidad="Kilogramos">PEDACERA DE MADERA, CARTON, PLASTICOS</option>
+                                                                            <option value="22" data-unidad="Kilogramos">PAPEL ENCERADO, POLVO, RESTO DE TIERRA</option>
+                                                                            <option value="23" data-unidad="Kilogramos">Y PAPEL SANITARIO</option>
+                                                                            <option value="24" data-unidad="Kilogramos">BASURA IND.(CARTON, MADERA, PAPEL)</option>
+                                                                            <option value="25" data-unidad="Kilogramos">BASURA INDUSTRIAL</option>
+                                                                            <option value="26" data-unidad="Kilogramos">RESIDUOS DE MANEJO ESPECIAL (MADERA)</option>
+                                                                            <option value="27" data-unidad="Kilogramos">DE MANEJO ESPECIAL</option>
+                                                                            <option value="28" data-unidad="Kilogramos">RESIDUO DE HULE</option>
+                                                                            <option value="29" data-unidad="Kilogramos">PLASTICO MOLIDO</option>
+                                                                            <option value="30" data-unidad="Kilogramos">Pedaceria de madera</option>
+                                                                            <option value="31" data-unidad="Kilogramos">SCRAP DE RECORTE ACRÍLICO  FIBRA DE VIDRIO</option>
+                                                                            <option value="32" data-unidad="Kilogramos">Mezcla de Residuos de Manejo Especial (Plasti</option>
+                                                                            <option value="33" data-unidad="Kilogramos">Papel, Cartón, Metal)</option>
+                                                                            <option value="48" data-unidad="Kilogramos">MEZCLA DE CARTON Y PLASTICO</option>
+                                                                            <option value="57" data-unidad="Kilogramos">PAPEL ENCERADO</option>
+                                                                            <option value="58" data-unidad="Kilogramos">METAL</option>
+                                                                            <option value="59" data-unidad="Kilogramos">ALUMINIO</option>
+                                                                            <option value="60" data-unidad="Kilogramos">PAPEL</option>
+                                                                            <option value="65" data-unidad="Metros Cubicos">RESIDUOS DE CONSTRUCCION, DEMOLICION</option>
+                                                                            <option value="66" data-unidad="Kilogramos">TIERRA DE NIVELACIÓN</option>
+                                                                            <option value="67" data-unidad="Kilogramos">ORGÁNICO </option>
+                                                                            <option value="68" data-unidad="Kilogramos">Residuos solidos urbanos de gran generador</option>
+                                                                            <option value="70" data-unidad="Kilogramos">FOAM</option>
+                                                                            <option value="71" data-unidad="Kilogramos">CHATARRA</option>
+                                                                            <option value="74" data-unidad="Kilogramos">PEDACERA DE FOAM</option>
+                                                                            <option value="77" data-unidad="Kilogramos">CARTONCILLO</option>
+                                                                            <option value="91" data-unidad="Kilogramos">CONTENEDOR VACÍO PARA ENTREGA</option>
+                                                                            <option value="92" data-unidad="Kilogramos">CARTÓN GRANEL</option>
+                                                                            <option value="93" data-unidad="Kilogramos">PAPEL ETIQUETAS</option>
+                                                                            <option value="94" data-unidad="Kilogramos">CHATARRA</option>
+                                                                            <option value="95" data-unidad="Kilogramos">FLEJE</option>
+                                                                            <option value="96" data-unidad="Kilogramos">SCRAP DE RECORTE ACRÍLICO</option>
+                                                                            <option value="97" data-unidad="Kilogramos">FIBRA DE VIDRIO</option>
+                                                                            <option value="98" data-unidad="Kilogramos">PET</option>
+                                                                            <option value="103" data-unidad="Kilogramos">Residuos de madera comprimida</option>
+                                                                            <option value="104" data-unidad="Metros Cubicos">MATERIAL PRODUCTO DE EXCAVACION</option>
+                                                                            <option value="105" data-unidad="Kilogramos">BORRA</option>
+                                                                            <option value="106" data-unidad="Metros Cubicos">RESIDUOS DE DEMOLICIÓN</option>
+                                                                            <option value="107" data-unidad="Kilogramos">Material caduco de impermeabilización </option>
+                                                                            <option value="108" data-unidad="Kilogramos">POLYFOAM</option>
+                                                                            <option value="109" data-unidad="Kilogramos">BORRA Y TIERRA</option>
+                                                                            <option value="110" data-unidad="Kilogramos">ESCORIA</option>
+                                                                            <option value="111" data-unidad="Kilogramos">ARENA DE MOLDEO</option>
+                                                                            <option value="112" data-unidad="Kilogramos">ESCOMBRO</option>
+                                                                            <option value="113" data-unidad="Kilogramos">TARIMAS</option>
+                                                                            <option value="114" data-unidad="Metros Cubicos">SUELO DE NIVELACIÓN Y EXCAVACIÓN.</option>
+                                                                            <option value="115" data-unidad="Kilogramos">MEZCLA DE ASERRÍN,PEDACERA Y MADERA</option>
+                                                                            <option value="116" data-unidad="Metros Cubicos">BENTONITA HÚMEDA</option>
+                                                                            <option value="117" data-unidad="Kilogramos">Desecho de Tela (Nylon)</option>
+                                                                            <option value="118" data-unidad="Kilogramos">Desecho de tela (Poliester )</option>
+                                                                            <option value="119" data-unidad="Kilogramos">RESIDUO SOLIDO URBANO</option>
+                                                                            <option value="121" data-unidad="Kilogramos">Mezcla de Residuos Industriales</option>
+                                                                            <option value="122" data-unidad="Kilogramos">GAYLOR DE POLYESTER</option>
+                                                                            <option value="123" data-unidad="Kilogramos">GAYLOR DE  NYLON</option>
+                                                                            <option value="124" data-unidad="Kilogramos">GAYLOR DESECHO DE VARILLA</option>
+                                                                            <option value="125" data-unidad="Kilogramos">YESO</option>
+                                                                            <option value="126" data-unidad="Kilogramos">SUELO DE EXCAVACION</option>
+                                                                            <option value="127" data-unidad="Metros Cubicos">Residuos de Construccion y Demolicion</option>
+                                                                            <option value="128" data-unidad="Metros Cubicos">Residuos de  Escombro de Concreto</option>
+                                                                            <option value="129" data-unidad="Kilogramos">ESPEJOS,VIDRIOS</option>
+                                                                            <option value="130" data-unidad="Kilogramos">SUELO DE EXCAVACIÓN Y NIVELACIÓN</option>
+                                                                            <option value="131" data-unidad="Metros Cubicos">Suelo de excavación y nivelación.</option>
+                                                                            <option value="132" data-unidad="Metros Cubicos">LODO DE BENTONITA</option>
+                                                                            <option value="133" data-unidad="Kilogramos">GAYLOR DE TELA</option>
+                                                                            <option value="134" data-unidad="Kilogramos">PLÁSTICO MIXTO</option>
+                                                                            <option value="135" data-unidad="Kilogramos">BASURA</option>
+                                                                            <option value="137" data-unidad="Kilogramos">Lodos Planta Tratamiento y Borra</option>
+                                                                            <option value="138" data-unidad="Kilogramos">Residuos de Demolición Horno de Fundición</option>
+                                                                            <option value="139" data-unidad="Kilogramos">YARDA TELA NYLON</option>
+                                                                            <option value="140" data-unidad="Kilogramos">YARDA VARILLA</option>
+                                                                            <option value="142" data-unidad="Metros Cubicos">ESCOMBRO CONCRETO Y TIERRA</option>
+                                                                            <option value="143" data-unidad="Metros Cubicos">TIERRA</option>
+                                                                            <option value="144" data-unidad="Kilogramos">PERECEDERO</option>
+                                                                            <option value="145" data-unidad="Kilogramos">MODULOS DE CONSTRUCCION RESIDUALES </option>
+                                                                            <option value="146" data-unidad="Piezas">MODULOS RESIDUALES </option>
+                                                                            <option value="147" data-unidad="Kilogramos">TELA (POLYESTER)</option>
+                                                                            <option value="148" data-unidad="Kilogramos">TELA (NYLON)</option>
+                                                                            <option value="149" data-unidad="Kilogramos">LADRILLO REFRACTARIO RESIDUAL DE HORNO</option>
+                                                                            <option value="172" data-unidad="Kilogramos">ESPEJOS QUEBRADOS</option>
+                                                                            <option value="173" data-unidad="Kilogramos">VIDRIO</option>
+                                                                            <option value="174" data-unidad="Kilogramos">LIJA</option>
+                                                                            <option value="175" data-unidad="Kilogramos">NYLON</option>
+                                                                            <option value="176" data-unidad="Kilogramos">YARDA NYLON</option>
+                                                                            <option value="177" data-unidad="Kilogramos">YARDA POLYESTER</option>
+                                                                            <option value="180" data-unidad="Kilogramos">LODOS</option>
+                                                                            <option value="181" data-unidad="Kilogramos">RESIDUO SOLIDO URBANO</option>
+                                                                            <option value="185" data-unidad="Kilogramos">FIBRA OPTICA</option>
+                                                                            <option value="186" data-unidad="Kilogramos">TRITURADO DE RESIDUOS DE MANEJO ESPECIAL</option>
+                                                                            <option value="187" data-unidad="Kilogramos">BASURA (plástico, cartón, papel)</option>
+                                                                            <option value="189" data-unidad="Kilogramos">RESIDUO DE MANEJO ESPECIAL (DESECHO DE BASURA</option>
+                                                                            <option value="190" data-unidad="Kilogramos">residuo de manejo especial (desecho de basura</option>
+                                                                            <option value="191" data-unidad="Kilogramos">SCRAP DE TELA</option>
+                                                                            <option value="193" data-unidad="Kilogramos">DESTRUCCION DE PRODUCTO</option>
+                                                                            <option value="194" data-unidad="Kilogramos">MATERIAL CONFINADO</option>
+                                                                            <option value="195" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENEIZADO</option>
+                                                                            <option value="196" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENIZADO</option>
+                                                                            <option value="197" data-unidad="Kilogramos">DESPERDICIO DE TABACO HOMOGENIZADO PARA ENVOL</option>
+                                                                            <option value="199" data-unidad="Kilogramos">SCRAP HUMEDO</option>
+                                                                            <option value="200" data-unidad="Kilogramos">CARBON ACTIVADO</option>
+                                                                            <option value="201" data-unidad="Kilogramos">envase vacios </option>
+                                                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-tipo-6d-container"><span class="select2-selection__rendered" id="select2-tipo-6d-container"><span class="select2-selection__placeholder">Tipo de Residuo</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td>
+                                            <td><input type="number" name="cantidad[]" class="form-control"></td>
+                                            <td><input type="text" name="contenedor[]" class="form-control"></td>
+                                            <td><input type="number" name="residuoTotal[]" class="form-control"></td>
+                                            <td><input type="text" name="residuoUnidad[]" class="form-control" readonly="true"></td>
+                                            <td>
+                                                <select class="select2 form-control select2-hidden-accessible" name="residuoDestino[]" data-placeholder="Seleccione Destino" style="width:100%;" tabindex="-1" aria-hidden="true">
+                                                <option value=""></option>
+                                                <option value="1">Reutilización</option>
+                                                <option value="2">Reciclaje</option>
+                                                <option value="3">Co-Procesamiento</option>
+                                                <option value="4a">Tratamiento Biológico</option>
+                                                <option value="4b">Tratamiento Químico</option>
+                                                <option value="4c">Tratamiento Físico</option>
+                                                <option value="4d">Tratamiento Térmico</option>
+                                                <option value="5">Acopio</option>
+                                                <option value="6">Almacenamiento</option>
+                                                <option value="7">Disposición Final</option>
+                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-residuoDestino-w0-container"><span class="select2-selection__rendered" id="select2-residuoDestino-w0-container"><span class="select2-selection__placeholder">Seleccione Destino</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    </div>   
+                                    <div>
+                                        <p class="m-0">Instrucciones especiales e informacion adicional para el manejo seguro de los residuos</p>
+                                        <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
+                                    </div>                                                           
+                                </div>
+                                <div><hr class="bar"></div>
+                                <!-- Transportista -->
+                                <div class="row bg-light">
+                                    <h3>Transportista</h3>
+                                    <div class="col-7">
+                                        <p class="m-0">Empresa trnasportista</p>
+                                        <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="m-0">Registro como prestador de servicios</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="m-0">Telefono</p>
+                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-12">
+                                    <p class="m-0">Domicilio</p>
+                                    <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-12">
+                                    <p>Recibí los materiales descritos en el manifiesto para su transporte:
+                                    </p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="m-0">Nombre del chofer</p>
+                                        <input class="form-control shadow mb-3" type="text" value=" " aria-label="Disabled input example">
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="m-0">Vehiculo</p>
+                                        <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="m-0">Placas</p>
+                                        <input class="form-control shadow mb-3" type="text" value="Solo lectura" aria-label="Disabled input example" disabled readonly>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="m-0">Fecha</p>
+                                        <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="m-0">Ruta</p>
+                                        <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example">
+                                    </div>
+                                </div>
+                                <div><hr class="bar"></div>
+                                <!-- Receptor -->
                                 <h3>Receptor</h3>
                                 <div class="col-7">
                                     <p class="m-0">Empresa receptora</p>
@@ -345,16 +357,33 @@
                                     <p class="m-0">Fecha de recepcion</p>
                                     <input class="form-control shadow mb-3" type="text" value="" aria-label="Disabled input example" >
                                 </div>
-                                <div class="col-lg-1 mt-3 mb-5">
-                                    <a type="submit" class="btn btn-outline-primary" href="#">Cancelar</a>
-                                </div>
-                                <div class="col-lg-1 mt-3 mb-5">
-                                    <a type="submit" class="btn btn-primary" href="#">Guardar</a>
+                                <!-- Botones -->
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-2 mt-3 mb-5">
+                                        <a type="submit" class="btn btn-outline-primary btn-lg" href="empleado.html">Regresar</a>
+                                    </div>
+                                    <div class="col-lg-2 mt-3 mb-5">
+                                        <a type="submit" class="btn btn-outline-primary btn-lg" href="#">Borrar</a>
+                                    </div>
+                                    <div class="col-lg-2 mt-3 mb-5">
+                                        <a type="submit" class="btn btn-primary btn-lg" href="#">Guardar</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <!-- Footer -->
+                    <footer class="mn text-center">
+                        <div class="row my-5">                                                        
+                                <div class="row align-content-center align-self-center justify-content-center">
+                                  <div class="col-5 px-0"><hr class="bar"></div>
+                                  <div class="col-2 col-sm-2 col-md-1 col-lg-1 px-3 px-sm-4 px-md-3 px-lg-4"><img src="svg/ecoblancob.svg" class="img-fluid p-0 mx-lg-3" width="30px"></div>
+                                  <div class="col-5 px-0"><hr class="bar"></div>
+                                </div>                            
+                            <p class="copyright pull-right">© 2022 Ecowaste</p>
+                        </div>
+                    </footer>
+                </div>                
             </div>
         </div>
     </body>
