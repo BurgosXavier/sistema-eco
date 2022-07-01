@@ -13,9 +13,10 @@
         <title>Ecowaste</title>
     </head>
     <body>
-<!-- Nav -->
+
         <div class="container-fluid">
             <div class="row">
+                <!-- Nav -->
                 <div class="col-12 col-lg-2 m-3" >
                     <nav class="nav sticky-top" >
                         <div class="row align-items-start justify-content-center">
@@ -60,41 +61,77 @@
                         </div>
                     </nav>
                 </div>
-<!-- Main -->
+                <!-- Main -->
                 <div class="col-12 col-lg-9 m-3">
                     <div class="container-fluid">
                         <div class="row my-5">
                             <h1 class="text-center display-4">Consulta por coleccion</h1>
                             <div class="container mt-5">
-                                <div class="row align-content-center align-self-center justify-content-center">
-                                  <div class="col-5 px-0"><hr class="bar"></div>
-                                  <div class="col-2 col-sm-2 col-md-1 col-lg-1 px-3 px-sm-4 px-md-3 px-lg-4"><img src="svg/ecoblancob.svg" class="img-fluid p-0 mx-lg-3" width="30 px"></div>
-                                  <div class="col-5 px-0"><hr class="bar"></div>
+                                <div class="row align-content-center align-self-center justify-content-center align-items-center">                               
+                                  <div class="col-12 px-0 mb-0"><hr class="bar"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container ">
-                        <div class="container m-3  rounded">                    
-                            <div class="row ">
-
-
-                            </div>
+                    <!-- Filtrado -->
+                    <h3>Selecciona y personaliza la colección de manifiestos que desees descargar</h3>
+                    <div class="col-12 m-5">
+                        <p class="m-0">Selecciona la empresa generadora</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-12 m-5">
+                        <p class="m-0">Selecciona al transportista</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-12 m-5">
+                        <p class="m-0">Selecciona al receptor</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-around text-center m-2">
+                        <div class="col-2">
+                            <p class="m-0">Desde la fecha</p>
+                            <input type="date">
+                        </div>
+                        <div class="col-2">
+                            <p class="m-0">Hasta la fecha</p>
+                            <input type="date">
                         </div>
                     </div>
-                    <footer class="text-center">
-                        <div class="container">
-                            <div class="row align-content-center align-self-center justify-content-center">
-                              <div class="col-5 px-0"><hr class="bar"></div>
-                              <div class="col-2 col-sm-2 col-md-1 col-lg-1 px-3 px-sm-4 px-md-3 px-lg-4"><img src="svg/ecoblancob.svg" class="img-fluid p-0 mx-lg-3" width="30 px"></div>
-                              <div class="col-5 px-0"><hr class="bar"></div>
-                            </div>
+                    <!-- Botones -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-2 mt-3">
+                            <a type="submit" class="btn btn-outline-primary btn-lg" href="consultas.html">Regresar</a>
                         </div>
-                        <p class="copyright pull-right">
-                            © 2022 Ecowaste
-                        </p>
-                    </footer>
-                </div>                
+                        <div class="col-lg-2 mt-3">
+                            <a type="submit" class="btn btn-primary btn-lg" href="#">Descargar</a>
+                        </div>
+                    </div>
+                <!-- Footer -->
+                <footer class="mn text-center">
+                    <div class="row my-5">                                                        
+                        <div class="row align-content-center align-self-center justify-content-center">
+                            <div class="col-5 px-0"><hr class="bar"></div>
+                            <div class="col-2 col-sm-2 col-md-1 col-lg-1 px-3 px-sm-4 px-md-3 px-lg-4"><img src="svg/ecoblancob.svg" class="img-fluid p-0 mx-lg-3" width="30px"></div>
+                            <div class="col-5 px-0"><hr class="bar"></div>
+                        </div>                            
+                        <p class="copyright pull-right">© 2022 Ecowaste</p>
+                    </div>
+                </footer>           
             </div>
         </div>
     </body>
