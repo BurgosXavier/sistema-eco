@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="sass/custom.css">
+        <link rel="stylesheet" href="sass/other.css">
+        <link rel="icon" href="svg/logow.svg" class="shadow-lg">
+        <title>Ecowaste</title>
+    </head>
+    <body>
+        <!-- Nav -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-2 m-3" >
+                    <nav class="nav sticky-top" >
+                        <div class="row align-items-start justify-content-center">
+                            <div class="col-10 col-lg-12 ">
+                                <img src="svg/ECOWASTE_R.svg" class="img-fluid my-5" alt="">
+                            </div>
+                            <div class="col-10">
+                                <a href="empleado.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-house-fill"></i> Inicio</h3>
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <a href="perfil.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-person-fill"></i> Perfil</h3>
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <a href="crear.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-file-earmark-plus-fill"></i> Crear manifiesto</h3>
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <a href="consultas.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-file-earmark-text-fill"></i> Consultas</h3>
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <div class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-book-fill"></i> Manual</h3>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <a href="administrador.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-shield-lock-fill"></i> Administrador</h3>
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <a href="index.html" class="row btn btn-outline-primary border-0 p-0 mx-0 my-3">
+                                    <h3><i class="bi bi-box-arrow-left"></i> Cerrar sesión</h3>                            
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Main -->
+                <div class="col-12 col-lg-9 m-3">
+                    <div class="container-fluid">
+                        <div class="row my-5">
+                            <h1 class="text-center display-4">Administracion</h1>
+                            <div class="container mt-3">
+                                <div class="row align-content-center align-self-center justify-content-center">
+                                    <div class="col-12 px-0"><hr class="bar"></div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="row justify-content-around">
+                            <h5>Aqui puedes agregar nuevos usuarios y consultar los que ya existen</h5>
+                            <div class="col-5 my-3">
+                               <p>Ingresa todos los datos necesarios para dar de alta un usuario nuevo</p> 
+                               <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Nombres</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Apellidos</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Usuario</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Contraseña</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Repetir contraseña</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id=" ">Nivel de acceso</span>
+                                    <input type="text" class="form-control" aria-label="">
+                                </div>
+                                <div class="row justify-content-center my-2">
+                                    <div class="col-1">
+                                        <a type="submit" class="btn btn-primary" href="#">Guardar</a>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-6 offset-1 my-3">
+                                <p>Estos son los usuarios que actualmente existen en el sistema</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Cantidad a visualizar
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#">50</a></li>
+                                                <li><a class="dropdown-item" href="#">100</a></li>
+                                                <li><a class="dropdown-item" href="#">200</a></li>
+                                                <li><a class="dropdown-item" href="#">Todos</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="container-fluid">
+                                            <form class="d-flex" role="search">
+                                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+                            </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-1">
+                                <a type="submit" class="btn btn-primary" href="administrador.html">Regresar <i class="bi bi-arrow-return-left"></i></a>
+                            </div>    
+                        </div>
+
+                        
+                    </div>                                        
+                </div>
+            </div>            
+        </div>    
+    </body>
+    <!-- Footer -->                    
+    <footer class="text-center">
+        <div class="row align-content-center align-self-center justify-content-center">
+            <div class="col-5 px-0"><hr class="bar"></div>
+            <div class="col-2 col-sm-2 col-md-1 col-lg-1 px-3 px-sm-4 px-md-3 px-lg-4"><img src="svg/ecoblancob.svg" class="img-fluid p-0 mx-lg-3" width="30 px"></div>
+            <div class="col-5 px-0"><hr class="bar"></div>
+        </div>                                            
+        <p class="copyright pull-right">© 2022 Ecowaste</p>
+    </footer>
+</html>
